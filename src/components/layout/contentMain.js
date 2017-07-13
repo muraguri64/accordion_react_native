@@ -1,14 +1,15 @@
 //where main content will go
 import React from 'react';
-import { Content, Text } from 'native-base';
+import { Content } from 'native-base';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from '../../reducers';
+import Librarylist from '../libraryList';
 
 const Contentmain = () => (
-        <Content padder>
+        <Content>
           <Provider store={createStore(reducers)}>
-            <Text>Accordion list goes here...</Text> 
+              <Librarylist />             
           </Provider>
         </Content>
     );
