@@ -5,24 +5,16 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Text, Header, Title, Body, Content } from 'native-base';
+import { Container } from 'native-base';
+import Headertop from './components/layout/headerTop';
+import Contentmain from './components/layout/contentMain';
 
 class App extends Component {
   render() {
     return (
       <Container>
-        <Header>
-          <Body style={{ flex: 1, alignItems: 'center' }}>
-            <Title>
-              Accordion List
-            </Title>
-          </Body>
-        </Header>
-        <Content padder>
-          <Text>
-            Accordion list goes here...
-          </Text>
-        </Content>
+        <Headertop headerTitle='Accordion List' />
+        <Contentmain />
       </Container>
     );
   }
