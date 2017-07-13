@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { List, ListItem, Text } from 'native-base';
 
 class Librarylist extends Component {
+    componentWillMount() {
+        this.dataItems = this.props.libraries;
+    }
+
     render() {
-        return;
+        return (
+            <List 
+                dataArray={this.dataItems}
+                renderRow={(item) =>
+                            <ListItem>
+                                <Text>{item.title}</Text>
+                            </ListItem>
+                         }
+            />
+          
+        );
     }
 }
 
