@@ -5,37 +5,27 @@
  */
 
 import React, { Component } from 'react';
-import {  
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { Container, Text, Header, Title, Body, Content } from 'native-base';
 
 class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native accordion example!
-        </Text>
-        
-      </View>
+      <Container>
+        <Header>
+          <Body style={{ flex: 1, alignItems: 'center' }}>
+            <Title>
+              Accordion List
+            </Title>
+          </Body>
+        </Header>
+        <Content padder>
+          <Text>
+            Accordion list goes here...
+          </Text>
+        </Content>
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
-});
 
 export default App;
