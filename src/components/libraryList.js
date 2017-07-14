@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { List, ListItem, Text } from 'native-base';
+import * as actions from '../actions';
 
 class Librarylist extends Component {
     componentWillMount() {
@@ -23,5 +24,6 @@ class Librarylist extends Component {
 }
 
 const mapStateToProps = state => ({ libraries: state.libraries });
-export default connect(mapStateToProps)(Librarylist);
+
+export default connect(mapStateToProps, actions)(Librarylist);
 
