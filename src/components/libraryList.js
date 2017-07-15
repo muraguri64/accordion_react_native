@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { TouchableWithoutFeddback } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native';
 import { List, ListItem, Text } from 'native-base';
 import * as actions from '../actions';
 
@@ -14,13 +14,13 @@ class Librarylist extends Component {
             <List 
                 dataArray={this.dataItems}
                 renderRow={(item) =>
-                            <TouchableWithoutFeddback 
+                            <TouchableWithoutFeedback 
                                 onPress={() => this.props.selectLibrary(item.id)}
                             >
                                 <ListItem>
                                     <Text>{item.title}</Text>
                                 </ListItem>
-                            </TouchableWithoutFeddback>
+                            </TouchableWithoutFeedback>
                          }
             />
           
