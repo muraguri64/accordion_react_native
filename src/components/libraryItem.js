@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { TouchableWithoutFeedback } from 'react-native';
+import { TouchableWithoutFeedback, LayoutAnimation } from 'react-native';
 import { ListItem, Text, View } from 'native-base';
 import * as actions from '../actions';
 
 class Libraryitem extends Component {
+    componentWillUpdate() {
+        LayoutAnimation.spring();
+    }
     renderDescription() {
          if (this.props.item.id === this.props.selectLibraryId) {
              return (
