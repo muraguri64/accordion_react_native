@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { TouchableWithoutFeedback } from 'react-native';
-import { List, ListItem, Text } from 'native-base';
+import { List } from 'native-base';
+import Libraryitem from './libraryItem';
 
 class Librarylist extends Component {
     componentWillMount() {
@@ -13,13 +13,7 @@ class Librarylist extends Component {
             <List 
                 dataArray={this.dataItems}
                 renderRow={(item) =>
-                            <TouchableWithoutFeedback 
-                                onPress={() => this.props.selectLibrary(item.id)}
-                            >
-                                <ListItem>
-                                    <Text>{item.title}</Text>
-                                </ListItem>
-                            </TouchableWithoutFeedback>
+                            <Libraryitem item={item} />
                          }
             />
           
